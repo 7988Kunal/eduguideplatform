@@ -118,7 +118,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./https://i.ibb.co/gZ91n8nM/A-seamless-backgroun.png);
+  background-image: url('./https://i.ibb.co/gZ91n8nM/A-seamless-backgroun.png');
   height:60vh;
   /* background-position:center; */
   background-size:cover;
@@ -490,4 +490,5 @@
     max-width: 100px;
   }
 }
+
 
