@@ -115,7 +115,7 @@
   display: none;
 }
 #set{
-  background-image: url(./Pictures/A\ seamless\ backgroun.png);
+  background-image: url(./A\ seamless\ backgroun.png);
   height:100vh;
   /* background-position:center; */
   background-size:cover;
@@ -315,3 +315,4 @@
     max-width: 100px;
   }
 }
+
