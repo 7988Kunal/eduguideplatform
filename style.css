@@ -1,0 +1,317 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Loader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #F10C49;
+  animation: l9 2s infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes l9 {
+  0% { box-shadow: 0 -16px #F4DD51, 11.3px -11.3px #E3AAD6; }
+  25% { box-shadow: 16px 0 #F4DD51, 11.3px 11.3px #E3AAD6; }
+  50% { box-shadow: 0 16px #F4DD51, -11.3px 11.3px #E3AAD6; }
+  75% { box-shadow: -16px 0 #F4DD51, -11.3px -11.3px #E3AAD6; }
+  100% { box-shadow: 0 -16px #F4DD51, 11.3px -11.3px #E3AAD6; }
+}
+
+.loading-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Tooltip and header */
+.e_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 10px;
+}
+
+#logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 36px;
+  color: #4285F4;
+  text-align: center;
+}
+
+.tooltiptext {
+  font-size: 14px;
+  visibility: hidden;
+  width: 220px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 55%;
+  margin-left: -110px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Main content */
+.main-content {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.main-content p{
+  margin-top:1%;
+  font-size:138%;
+}
+
+.hidden {
+  display: none;
+}
+#set{
+  background-image: url(./Pictures/A\ seamless\ backgroun.png);
+  height:100vh;
+  /* background-position:center; */
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* ----- Base styling ----- */
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #222;
+  color: white;
+  position: relative;
+  font-family: Arial, sans-serif;
+  z-index: 10;
+}
+
+/* Hamburger */
+.ham-burger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.ham-burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation menu */
+.source {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.source li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.source li:hover {
+  color: #1e90ff;
+}
+
+/* Remove default link styling */
+.source li a {
+  display: block;       /* fills the li area */
+  text-decoration: none; 
+  color: white;
+  padding: 5px 10px;   /* controls height */
+  font-size: 20px;      /* bigger text */
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect */
+.source li a:hover {
+  color: #1e90ff;
+  background-color: rgba(255,255,255,0.1); /* optional highlight */
+  border-radius: 4px;
+}
+
+/* Mobile / dropdown */
+@media (max-width: 768px) {
+  .source li a {
+    padding: 12px 20px; /* smaller padding for mobile */
+    font-size: 16px;
+  }
+}
+
+
+/* ----- Desktop / Large screens ----- */
+@media (min-width: 1025px) {
+  .source li {
+    padding: 10px 10px;   /* taller menu items */
+    font-size: 23px;      /* bigger font */
+  }
+
+  .source {
+    gap: 40px;            /* optional: increase spacing between items */
+  }
+}
+
+/* ----- Tablet & Mobile ----- */
+@media (max-width: 1024px) {
+  .source {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ham-burger {
+    display: flex;
+  }
+
+  /* Stack menu vertically below hamburger */
+  .source {
+    position: absolute; /* relative to menu-bar */
+    top: 50px; /* below hamburger */
+    left:20px; /* align with hamburger */
+    flex-direction: column;
+    background-color: #222;
+    padding: 10px 0;
+    border-radius: 6px;
+    width: 150px; /* fixed width */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  /* Show menu when active */
+  .source.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .source li {
+    padding: 10px 20px;
+    width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .source {
+    width: 130px; /* smaller width */
+    right: 15px;
+  }
+
+  .source li {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .ham-burger {
+    width: 25px;
+    height: 18px;
+  }
+
+  .ham-burger span {
+    height: 2.5px;
+  }
+}
+
+/* Hamburger animation */
+.ham-burger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.ham-burger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-burger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .tooltip {
+    font-size: 28px;
+  }
+  .tooltiptext {
+    width: 180px;
+    margin-left: -90px;
+    font-size: 12px;
+  }
+  #logo {
+    max-width: 140px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tooltip {
+    font-size: 22px;
+  }
+  .tooltiptext {
+    width: 150px;
+    margin-left: -75px;
+    font-size: 11px;
+  }
+  #logo {
+    max-width: 100px;
+  }
+}
