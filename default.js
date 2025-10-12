@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
       preloader.style.display = "none";
       content.classList.remove("hidden");
     }, 600); // match CSS transition
-  }, 10000); // 10 seconds
+  }, 5000); // 5 seconds
 });
 
  const burger = document.querySelector('.ham-burger');
@@ -22,4 +22,5 @@ window.addEventListener("load", () => {
     
     // Animation for burger
     burger.classList.toggle('toggle');
+
   });
