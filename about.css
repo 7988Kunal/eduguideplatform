@@ -1,0 +1,26 @@
+#intro{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin:2.4%;
+  color: rgb(55, 53, 53);
+  padding:30px;
+  /* background-color: #969292; */
+  background-color: ghostwhite;
+  border:0.5px solid rgb(183, 149, 214);
+}
+#what{
+  color:#0c0457;
+}
+#ans{
+  margin-top:10px;
+  font-size:1.1rem;
+}
+ul{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: brown;
+  margin-top: 1rem;
+  font-size:1.2rem;
+}
+li{
+  color:rgb(55, 53, 53) ;
+  font-size: 1.1rem;
+}
