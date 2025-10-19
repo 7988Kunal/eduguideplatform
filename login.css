@@ -70,8 +70,8 @@
 }
 
 #log-container{
-  width: 75%;
-  height: 75%;
+  width:85%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,10 +127,68 @@ label{
     margin-top:0.5rem;
     outline:none;
     border:0;
+    /* font-size:16px;
+    font-weight:700; */
 }
 #log:hover{
     transform: scale(1.1);
     font-weight: bold;
     color: #fff;
     background-color: rgb(20, 81, 147);
+}
+#forgot{
+    font-weight: bold;
+    font-size:1.1rem;
+}
+#forgot a{
+    text-decoration: none;
+    color:purple;
+}
+#forgot a:hover{
+    font-size:1.2rem;
+    color: plum;
+}
+.fa-lock{
+    margin-right:15px;
+}
+
+#part1{
+   display: flex;
+   align-items: center;
+}
+
+#new{
+    font-weight: 600;
+    font-size:18px;
+}
+#sign{
+    text-decoration: none;
+    background-color: bisque;
+    padding:10px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-left:15px;
+    font-size:1.05rem;
+    border-radius:10px;
+}
+
+.fa-sign-in-alt{
+    margin-right:5px;
+}
+
+#sign:hover{
+    transform: scale(1.1);
+    color: #fff;
+    background-color: cadetblue;
+}
+
+@media (max-width:320px) {
+    #part1{
+        flex-direction: column;
+        justify-content: start;
+    }
+    #sign{
+        padding:10px;
+        margin-top:5px;
+    }
 }
