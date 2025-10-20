@@ -50,3 +50,11 @@ h1{
     gap:16.5%;
   }
 }
+@media (max-width:360px) {
+  #intro{
+    margin:8%;
+  }
+  h1{
+    text-decoration:none;
+  }
+}
